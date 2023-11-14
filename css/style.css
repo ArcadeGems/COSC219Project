@@ -91,7 +91,15 @@ body {
 	background-color: rgb(168,158, 255);
 	margin: 0px;
 }
+.clipart{
+	display: block;
+	margin: 0 auto;
+	padding: 4%;
+	max-height: 250px;
+	width:auto;
+	padding-top: 50px;
 
+}
 main {
 	display: flex;
 	flex-direction: column;
@@ -112,11 +120,18 @@ main section {
 		border-top: 10px;
 	border-top-color: white;
 }
-
+main h2{
+	text-align: center;
+	font-size: 55px;
+	text-transform: uppercase;
+}
+#join{
+	text-align: center;
+}
 footer {
 	margin: 0 20% 0 20%;
 	background-color: rgb(0, 0, 0, 0.05);
-	
+	text-align: center;
 
 }
 
