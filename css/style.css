@@ -1,3 +1,14 @@
+/*colors from logo:
+screen: rgb(220, 154, 254);
+around screen: rgb(255, 103, 160);
+top panel text: rgb(255, 106, 164);
+top panel bg: rgb(54, 39, 106);
+body: rgb(57,162, 254);
+gem main: rgb(254,33,15);
+gem alt: rgb(255,109,99);
+
+*\
+
 @font-face {
 	font-family: 'Helvetica';
 	src: url('/fonts/helvetica.woff2') format('woff2'),
@@ -9,11 +20,12 @@
 /* Use the font in your CSS */
 body {
 	font-family: 'Helvetica', sans-serif;
+	
 }
 
 a:visited {
 	text-decoration: none;
-	color: #681da8;
+	color: rgb(255, 106, 164);
 }
 
 .navbar {
@@ -23,34 +35,43 @@ a:visited {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: rgb(255, 169, 222);
+	background-color: rgb(57,162, 254);
+	/*makes the navbar ontop of everything*/
+	z-index: 1;
+	font-weight:bold;
+	/*font color*/
+	
+	
+
 }
 
 .navbar ul {
 	/* position: fixed; */
 	display: flex;
-	background-color: rgb(255, 230, 245);
+	background-color: rgb(57,162, 254);
 	justify-content: space-evenly;
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	border: 1px solid rgba(0, 0, 0, 0.2);
+	border: 0px solid rgba(0, 0, 0, 0.2);
+	padding: 5px;
 }
 
 .navbar li {
-	margin: 0 20px;
+	margin: 0 5px;
 	color: #000000;
-	background-color: rgb(255, 230, 245);
+	background-color: rgb(54, 39, 106);
 	border-radius: 5px;
 	border: 3px solid transparent;
 	/* add transparent border */
+	color: rgb(255, 106, 164);
+	
 }
 
 .navbar li:hover {
-	border-color: rgb(60, 25, 65);
+	border-color: rgb(54, 39, 106);
 	/* change border color on hover */
-	background-color: rgb(60, 25, 65);
-	color: white;
+	background-color: rgb(254,33,15);
 }
 
 .navbar li a {
@@ -61,34 +82,56 @@ a:visited {
 	display: block;
 	margin: 0 auto;
 	padding: 4%;
+	max-height: 250px;
+	width:auto;
+	padding-top: 50px;
 }
 
 body {
-	background-color: rgb(210, 209, 255);
+	background-color: rgb(168,158, 255);
 	margin: 0px;
 }
+.clipart{
+	display: block;
+	margin: 0 auto;
+	padding: 4%;
+	max-height: 250px;
+	width:auto;
+	padding-top: 50px;
 
+}
 main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-color: rgb(0, 0, 0, 0.05);
+	background-color: rgba(255, 103, 160,.9);
 	padding: 1.5% 0 0 0;
 	margin: 0 20% 0 20%;
 	min-height: calc(100vh - 20vh);
+	color:white;
+
 }
 
 main section {
-	background-color: rgb(255, 169, 222);
+	background-color: rgb(220, 154, 254);
 	border: 1px solid black;
 	margin: 0 3% 0 3%;
 	min-height: calc(100vh - 20vh);
+		border-top: 10px;
+	border-top-color: white;
 }
-
+main h2{
+	text-align: center;
+	font-size: 55px;
+	text-transform: uppercase;
+}
+#join{
+	text-align: center;
+}
 footer {
 	margin: 0 20% 0 20%;
 	background-color: rgb(0, 0, 0, 0.05);
-
+	text-align: center;
 
 }
 
@@ -101,6 +144,7 @@ footer {
 	padding: 1.5% 0 0 0;
 	margin: 0 3% 0 3%;
 	/* border: 1px solid black; */
+	
 }
 
 .footer-social ul {
@@ -113,12 +157,13 @@ footer {
 
 .footer-social li {
 	margin: 0 10px;
-	color: #000000;
-	background-color: rgb(255, 230, 245);
+	color: rgb(54, 39, 106);
+	background-color: rgb(255, 106, 164);
 	padding: 10px;
 	border-radius: 5px;
 	border: 3px solid transparent;
-	/* add transparent border */
+	font-weight:bold;
+	/* add transparent border */	
 }
 
 .footer-social li:hover {
