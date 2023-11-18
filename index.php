@@ -5,7 +5,6 @@
   <title>Home</title>
   <meta charset="utf-8" />
   <link rel="stylesheet" href="css/style.css" />
-
 </head>
 
 <body>
@@ -13,82 +12,64 @@
     <nav class="navbar">
       <ul>
         <li><a href="#games">GAMES</a></li>
-        <li><a href="#mission">MISSION</a></li>
         <li><a href="#aboutus">ABOUT US</a></li>
-        <li><a href="#join">JOIN NOW</a></li>
+        <li><a href="#database">JOIN NOW</a></li>
+        <li><a href="#feedback">FEEDBACK</a></li>
         <li><a href="#footer-social">CONTACT</a></li>
       </ul>
+
+
     </nav>
     <section class="logo">
-      <img src="logo_square_1485x1485_tight.jpg" alt="logo" />
-      <!--<img src="logo_square_2000x2000.jpg" alt="logo"/>  -->
-      <!--<img src="logo_square_2970x1485_long.jpg" alt="logo"/>  -->
+      <img src="img/logo_square_1485x1485_tight.jpg" alt="logo" id="logo" />
     </section>
   </header>
   <main>
     <section class="main-content">
       <h1 id="games">
-        <br><br>
+        <br>
         <h2>Our Games</h2>
         <p>
-          <img src="workingonitclear.png" class="clipart" alt="Working on it" id="workingonit" style="max-height: 400px; width: auto;">
-          <br>STAY TUNED :D
-        </p>
-        <br><br><br><br><br>
-      </h1>
-      <h1 id="presskit"> </h1>
-      <h1 id="mission">
-        <br><br>
-        <h2 id="mission-statement">Our Mission</h2>
-        <p>
-          <img src="cartoonmanjumpingclear.png" class="clipart" alt="Cartoon man jumping" id="cartoonmanjumping" style="max-height: 400px; width: auto;">
-          <br>
-          At our company, we're passionate about creating games that we'd actually want to play ourselves. We believe that the best games are those that are made with love and care, and that's exactly what we strive to do with every project we take on. Our goal is to create immersive, engaging experiences that transport players to new worlds and challenge them in exciting ways. We're committed to pushing the boundaries of what's possible in game development, and we can't wait to see where our journey takes us.
+          <img src="img/workingonitclear.png" class="clipart" alt="Working on it" id="workingonit" style="max-height: 400px; width: auto;">
+          Come Back Soon!
         </p>
         <br><br><br><br><br>
       </h1>
       <h1 id="aboutus">
-        <br><br>
+        <br>
         <h2>About us</h2>
         <p>
-          <img src="studyowlclear.png" class="clipart" alt="Study Owl" id="studyowl" style="max-height: 400px; width: auto;">
-          <br>
+          <img src="img/studyowlclear.png" class="clipart" alt="Study Owl" id="studyowl" style="max-height: 400px; width: auto;">
           Reilly and Cade are two novice game developers currently studying Computer Science at Okanagan College.
           With a passion for gaming and a drive to create their own games, they have been working hard to learn the skills necessary to bring their ideas to life. Through their studies, they have gained experience in programming languages such as Java and C++, as well as game engines like Unity.
           They are excited to continue learning and growing as game developers, and can't wait to share their creations with the world.
         </p>
         <br><br><br><br><br>
       </h1>
-      <h1 id="join">
-        <br><br>
-        <h2>Join now!</h2>
-        <br><br><br>
-        <!--Form for users to enroll-->
 
-        <?php
-        include('contact_form.php');
-        isset($_POST['submit']) ? include('contact_form_response.php') : NULL;
-        ?>
-
-        <br><br><br><br>
-      </h1>
       <h1 id="database">
         <br>
-      <img src="laptop_transparent_screen.png" class="clipart" alt="laptop" id="laptop" style="max-height: 600px; width: auto;">
-          
+        <h2>Join our database!</h2>
+        <div id="laptop-terminal">
+          <img src="img/laptop_transparent_screen.png" class="clipart" alt="laptop" id="laptop" style="max-height: 750px; width: auto;">
+        </div>
         <br><br>
       </h1>
 
+      <h1 id="feedback">
+        <br>
+        <h2>Give us your feedback!</h2>
 
+        <div class="image-text-container">
+          <img src="img/cartoonmanjumpingclear.png" class="clipart" alt="Cartoon man jumping" id="cartoonmanjumping" style="max-height: 300px; width: auto;">
 
-
-
-
-
-
-
-
-
+          <?php
+          include('php_snippet/contact_form.php');
+          isset($_POST['submit']) ? include('php_snippet/contact_form_response.php') : NULL;
+          ?>
+        </div>
+        <br><br><br><br>
+      </h1>
     </section>
   </main>
 
