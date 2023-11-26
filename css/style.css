@@ -18,6 +18,11 @@ body {
 	color: rgb(255, 106, 164);
 }
 
+a:link {
+	text-decoration: none;
+	color: rgb(255, 106, 164);
+}
+
 .navbar {
 	position: fixed;
 	justify-content: center;
@@ -49,6 +54,7 @@ body {
 .navbar ul.main-links li:hover {
 	border-color: rgb(54, 39, 106);
 	background-color: rgb(254, 33, 15);
+	
 }
 
 .navbar li a {
@@ -110,6 +116,7 @@ main section {
 	min-height: calc(100vh - 20vh);
 	border-top: 10px;
 	border-top-color: white;
+	font-size: calc(1em + 1vw);
 }
 
 main h2 {
@@ -159,6 +166,8 @@ footer {
 	border-color: rgb(60, 25, 65);
 	background-color: rgb(60, 25, 65);
 	color: white;
+	
+
 }
 
 .footer-social li a {
