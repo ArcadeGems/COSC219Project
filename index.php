@@ -10,15 +10,17 @@
 <body>
   <header>
     <nav class="navbar">
-      <ul>
+      <ul class="main-links">
         <li><a href="#games">GAMES</a></li>
         <li><a href="#aboutus">ABOUT US</a></li>
         <li><a href="#database">JOIN NOW</a></li>
         <li><a href="#feedback">FEEDBACK</a></li>
         <li><a href="#footer-social">CONTACT</a></li>
       </ul>
-
-
+      <ul class="sub-links">
+        <li><a href="php/signup.php">SIGN UP</a></li>
+        <li><a href="insert ajax">LOGIN</a></li>
+      </ul>
     </nav>
     <section class="logo">
       <img src="img/logo_square_1485x1485_tight.jpg" alt="logo" id="logo" />
@@ -50,8 +52,9 @@
       <h1 id="database">
         <br>
         <h2>Join our database!</h2>
-        <div id="laptop-terminal">
-          <img src="img/laptop_transparent_screen.png" class="clipart" alt="laptop" id="laptop" style="max-height: 750px; width: auto;">
+        <div class="laptopterminal" id="laptop-terminal">
+          <img src="img/laptop_transparent_screen.png" alt="laptop" id="laptop">
+          <textarea readonly id="terminal" rows="10" cols="50"></textarea>
         </div>
         <br><br>
       </h1>
@@ -64,7 +67,7 @@
           <img src="img/cartoonmanjumpingclear.png" class="clipart" alt="Cartoon man jumping" id="cartoonmanjumping" style="max-height: 300px; width: auto;">
 
           <?php
-          include('php_snippet/contact_form.php');
+          include('php/contact_form.php');
           isset($_POST['submit']) ? include('php_snippet/contact_form_response.php') : NULL;
           ?>
         </div>
