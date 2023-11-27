@@ -1,11 +1,30 @@
 <body>
-	<h1>Signup Form</h1>
+	<!--TODO: - Center elements in this form
+			  - Remove gap from h1 & h6-->
+	<h1 class="text-center">Create Account</h1>
+	<h6 class="text-center">Already have an account? <a href="login.php">Log in</a></h6>
+
 	<form action="processForm.php" method="post">
-		<input type="text" id="firstName" name="firstName" placeholder="First Name"><br>
-		<input type="text" id="lastName" name="lastName" placeholder="Last Name"><br>
-		<input type="email" id="email" name="email" placeholder="Email" required="@"><br>
-		<input type="number" id="age" name="age" min="18" max="100" placeholder="Age" required><br>
-		<input type="password" id="password" name="password" placeholder="Password" required><br>
-		<input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required><br><br>
-		<input type="submit" value="Submit">
+		<div class="mb-3">
+			<input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name">
+		</div>
+		<div class="mb-3">
+			<input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name">
+		</div>
+		<div class="mb-3">
+			<input type="email" class="form-control" id="email" name="email" placeholder="Email" required="@">
+		</div>
+		<div class="mb-3">
+			<input type="number" class="form-control" id="age" name="age" min="18" max="100" placeholder="Age" required>
+		</div>
+		<div class="mb-3">
+			<input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+		</div>
+		<div class="mb-3">
+			<input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+		</div>
+		<div class="mb-3">
+			<input type="submit" class="btn btn-primary" value="Submit">
+		</div>
+	</form>
 </body>

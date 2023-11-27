@@ -22,18 +22,6 @@
   <br><br><br><br><br>
 </h1>
 
-
-<h1 id="database">
-  <br>
-  <h2>Join our database!</h2>
-  <div class="laptopterminal" id="laptop-terminal">
-    <img src="img/laptop_transparent_screen.png" alt="laptop" id="laptop">
-    <textarea readonly id="terminal" rows="10" cols="100"><?php include('php/content/terminal.php'); ?></textarea>
-  </div>
-  <br><br>
-</h1>
-
-
 <h1 id="feedback">
   <br>
   <h2>Give us your feedback!</h2>
@@ -47,4 +35,15 @@
     ?>
   </div>
   <br><br><br><br>
+</h1>
+
+
+<h1 id="database">
+  <br>
+  <h2>Join our database!</h2>
+  <div class="laptopterminal" id="laptop-terminal">
+    <img src="img/laptop_transparent_screen.png" alt="laptop" id="laptop">
+    <textarea readonly id="terminal" rows="10" cols="50"><?php include('php/content/terminal.php'); ?></textarea>
+  </div>
+  <br><br>
 </h1>
