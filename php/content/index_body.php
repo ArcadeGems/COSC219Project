@@ -44,7 +44,7 @@ session_start();
   <br>
   <h2>Join our database!</h2>
   <div class="laptopterminal" id="laptop-terminal">
-    <img src="img/laptop_transparent_screen.png" alt="laptop" id="laptop">
+    <img src="img/laptop_transparent_screen_small.png" alt="laptop" id="laptop">
     <textarea readonly id="terminal" rows="10" cols="50"></textarea>
     <script>
       var username = getCookie("username");
