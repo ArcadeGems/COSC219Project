@@ -136,7 +136,7 @@
                   <div class="row">
                     <div class="col-md-6 mb-4">
                       <div class="form-outline">
-                        <input type="number" id="age" class="form-control" name="age" min="18" max="100" placeholder="Age" required />
+                        <input type="number" id="age" class="form-control" name="age" min="13" max="100" placeholder="Age" required />
                       </div>
                     </div>
                     <div class="col-md-6 mb-4">
@@ -186,6 +186,41 @@
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  
+  <!-- TODO: 
+  
+             USE THIS SCRIPT TO CHECK IF PASSWORDS MATCH INSTEAD.
+             PLEASE REMOVE THE DISABLE FOR SUBMIT BUTTONS.
+             JUST USE A PHP QUERY TO CHECK IF EMAIL EXISTS INSTEAD OF JS OR ELSE LOOP BACK TO POST.
+
+
+             
+             I STRONGLY SUGGEST AVOIDING EVENT LISTENERS IF POSSIBLE,
+             THEY ARE EXTREMELY FINICKY AND I WENT THROUGH IT ALL ALREADY
+             WITH THE BOOTSTRAP INDEED DROPDOWN...
+             BOOTSTRAP AND JS EVENT HANDLERS CREATES AN ABSOLUTE MESS,
+             BOOTSTRAP CONTAINS ITS OWN SPECIAL SET OF OBJECT HANDLERS I'D
+             RECOMMEND USING IF ANY.
+
+             
+
+    <script>
+  var password = document.getElementById("password")
+  , confirm_password = document.getElementById("confirmPassword");
+
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords Don't Match");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+</script>
+-->
+  
   <script>
     var passwordsMatch = false;
     var emailIsUnique = false;
@@ -272,5 +307,4 @@
     });
   </script>
 </body>
-
 </html>

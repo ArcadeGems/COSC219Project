@@ -2,8 +2,9 @@
 <html>
 
 <head>
-  <title>Home</title>
+  <title>Arcade-Gems</title>
   <meta charset="utf-8" />
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
@@ -18,8 +19,7 @@
 
 <body>
   <header>
-    <?php include('php/structure/top_navigation_bar.php');
-    ?>
+    <?php include('php/structure/top_navigation_bar.php');?>
     <section class="logo">
       <img src="img/logo_square_1485x1485_tight_transparent.png" alt="logo" id="logo" />
     </section>
