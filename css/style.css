@@ -13,6 +13,13 @@ body {
 	margin: 0;
 }
 
+textarea{
+	margin:0;
+	font-family: monospace !important;
+	font-size: 16px !important;
+	line-height:inherit;
+}
+
 *:visited {
 	text-decoration: none;
 	color: rgb(255, 106, 164);
@@ -192,15 +199,17 @@ position: relative;
 	height: 100%;
 }
 
-.laptopterminal textarea {
+
+
+.laptopterminal #terminal {
 	position: absolute;
-	width: 47%;
-	height: 26%;
+	width: 47.6%;
+	height: 27%;
 	top: 41.2%;
-	left: 24.2%;
+	left: 24.3%;
 	background-color: rgb(0, 0, 0); 
 	color: green;
-    border-radius: 3%;
+	border-radius: 3%;
 	border: 2px solid black;
 	resize: none;
 }

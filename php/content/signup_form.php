@@ -4,7 +4,7 @@
 	<h1 class="text-center">Create Account</h1>
 	<h6 class="text-center">Already have an account? <a href="login.php">Log in</a></h6>
 
-	<form action="processForm.php" method="post">
+	<form action="php/content/processForm.php" method="post">
 		<div class="mb-3">
 			<input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name">
 		</div>

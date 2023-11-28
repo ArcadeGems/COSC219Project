@@ -1,19 +1,19 @@
 <?php
-
-$conn = mysqli_connect("localhost", "coscuser", "letmein", "cosc219");
+$conn = mysqli_connect("sql3.freesqldatabase.com", "sql3665664", "CgfGZSk8Ij", "sql3665664");
 
 if (mysqli_connect_errno()) {
-	die("Connection failed: ".mysqli_connect_error());
+    die("Connection failed: ".mysqli_connect_error());
 }
 
 echo "Connected successfully\n";
+$maxCommentWidth = 50; // Maximum width of the comment column
 
-$sql = "SELECT * FROM emailList";
+$sql = "SELECT * FROM comments";
 
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
-    $lengths = ['f_name' => 0, 'l_name' => 0, 'email' => 0];
+    $lengths = ['email' => 0, 'comment' => 0];
 
     // Calculate max lengths
     while ($row = mysqli_fetch_assoc($result)) {
@@ -26,26 +26,30 @@ if (mysqli_num_rows($result) > 0) {
     mysqli_data_seek($result, 0);
 
     // Generate table header
-    foreach ($lengths as $key => $length) {
-        echo "+", str_repeat("-", $length + 2);
+    foreach ($lengths as $key => $value) {
+        printf("| %-" . $value . "s ", $key);
     }
-    echo "+\n";
 
-    // Generate table row
-    while ($row = mysqli_fetch_assoc($result)) {
-        foreach ($row as $key => $value) {
-            printf("| %-" . $lengths[$key] . "s ", $value);
+  // Generate table row
+// Generate table row
+while ($row = mysqli_fetch_assoc($result)) {
+    $commentLines = [];
+    foreach ($row as $key => $value) {
+        if ($key == 'comment' && strlen($value) > $maxCommentWidth) {
+            // Wrap the comment onto multiple lines
+            $commentLines = explode("\n", wordwrap($value, $maxCommentWidth, "\n"));
+            $value = $commentLines[0];
         }
-        echo "|\n";
+        printf("| %-" . $lengths[$key] . "s ", $value);
     }
+    echo "|\n";
 
-    // Generate table footer
-    foreach ($lengths as $key => $length) {
-        echo "+", str_repeat("-", $length + 2);
+    // Print remaining comment lines
+    for ($i = 1; $i < count($commentLines); $i++) {
+        printf("| %-" . $lengths['email'] . "s | %-" . $lengths['comment'] . "s |\n", "", $commentLines[$i]);
     }
-    echo "+\n";
+}
 } else {
     echo "No results found.\n";
 }
-
 ?>

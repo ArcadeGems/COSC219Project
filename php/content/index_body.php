@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <h1 id="games">
   <br>
   <h2>Our Games</h2>
@@ -31,7 +34,6 @@
 
     <?php
     include('php/content/contact_form.php');
-    isset($_POST['submit']) ? include('php/content/contact_form_response.php') : NULL;
     ?>
   </div>
   <br><br><br><br>
@@ -43,7 +45,35 @@
   <h2>Join our database!</h2>
   <div class="laptopterminal" id="laptop-terminal">
     <img src="img/laptop_transparent_screen.png" alt="laptop" id="laptop">
-    <textarea readonly id="terminal" rows="10" cols="50"><?php include('php/content/terminal.php'); ?></textarea>
+    <textarea readonly id="terminal" rows="10" cols="50"></textarea>
+    <script>
+      var username = getCookie("username");
+      if (username) {
+        refreshData();
+        setInterval(refreshData, 15000);
+      } else {
+        document.getElementById("terminal").innerHTML = "Welcome to our database! Please sign up to join.";
+      }
+
+      function refreshData() {
+        // Step 1: Create a new XMLHttpRequest object
+        var xhr = new XMLHttpRequest();
+
+        // Step 2: Define a callback function for the onreadystatechange event
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState == 4 && xhr.status == 200) {
+            // Step 5: Update the text on the page
+            document.getElementById("terminal").innerHTML = xhr.responseText;
+          }
+        };
+
+        // Step 3: Open a connection to the server
+        xhr.open("GET", "php/content/terminal.php", true);
+
+        // Step 4: Send the request
+        xhr.send();
+      }
+    </script>
   </div>
   <br><br>
 </h1>
