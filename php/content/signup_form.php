@@ -22,6 +22,7 @@
 		</div>
 		<div class="mb-3">
 			<input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+			<small id="passwordMismatch" class="text-danger d-none">Passwords do not match</small>
 		</div>
 		<div class="mb-3">
 			<input type="submit" class="btn btn-primary" value="Submit">

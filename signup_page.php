@@ -136,7 +136,7 @@
                   <div class="row">
                     <div class="col-md-6 mb-4">
                       <div class="form-outline">
-                        <input type="number" id="age" class="form-control" name="age" min="18" max="100" placeholder="Age" required />
+                        <input type="number" id="age" class="form-control" name="age" min="13" max="100" placeholder="Age" required />
                       </div>
                     </div>
                     <div class="col-md-6 mb-4">
@@ -189,5 +189,4 @@
   <script type="text/javascript" src="JS/formValidation.js"></script>
   <script type="text/javascript" src="JS/signUp.js"></script>
 </body>
-
 </html>
