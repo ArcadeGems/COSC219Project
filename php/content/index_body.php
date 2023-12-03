@@ -1,6 +1,19 @@
 <?php
 session_start();
 ?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+@keyframes rainbow {
+  0% {color: red;}
+  14% {color: orange;}
+  28% {color: yellow;}
+  42% {color: lime;}
+  57% {color: blue;}
+  71% {color: indigo;}
+  85% {color: violet;}
+  100% {color: red;}
+}
+</style>
 <h1 id="games">
   <br>
   <h2>Our Games</h2>
@@ -46,34 +59,13 @@ session_start();
   <div class="laptopterminal" id="laptop-terminal">
     <img src="img/laptop_transparent_screen.png" alt="laptop" id="laptop">
     <textarea readonly id="terminal" rows="10" cols="50"></textarea>
-    <script>
-      var username = getCookie("username");
-      if (username) {
-        refreshData();
-        setInterval(refreshData, 15000);
-      } else {
-        document.getElementById("terminal").innerHTML = "Welcome to our database! Please sign up to join.";
-      }
-
-      function refreshData() {
-        // Step 1: Create a new XMLHttpRequest object
-        var xhr = new XMLHttpRequest();
-
-        // Step 2: Define a callback function for the onreadystatechange event
-        xhr.onreadystatechange = function() {
-          if (xhr.readyState == 4 && xhr.status == 200) {
-            // Step 5: Update the text on the page
-            document.getElementById("terminal").innerHTML = xhr.responseText;
-          }
-        };
-
-        // Step 3: Open a connection to the server
-        xhr.open("GET", "php/content/terminal.php", true);
-
-        // Step 4: Send the request
-        xhr.send();
-      }
-    </script>
+    <script src="JS/terminalFunction.js"></script>
   </div>
+  <div class="scroll" style="width: 100%; overflow: hidden;">
+  <p id="scrolltext" style="font-size: 50px; position: relative; left: 100%; white-space: nowrap; animation: rainbow 5s linear infinite;">I hope you enjoyed!</p>
+  <p id="scrolltext2" style="font-size: 50px; position: relative; left: 100%; white-space: nowrap; animation: rainbow 5s linear infinite;">our Website!</p>
+
+  <script src="JS/jQueryDemo.js"></script>
+</div>
   <br><br>
 </h1>
