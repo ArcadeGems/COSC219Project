@@ -4,7 +4,7 @@
   <input type="email" id="email" name="email" placeholder="Email Address" required="@" style="text-align:center;"><br><br>
   <textarea name="message" rows="10" cols="20" placeholder="Tell us what you think!" maxlength="255" required></textarea>
   <br>
-  <input id="emailListSubmit" type="submit" value="submit" name="submit">
+  <input id="emailListSubmit" type="submit" value="Submit" name="submit">
 
 
 </form>

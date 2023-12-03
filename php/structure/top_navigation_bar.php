@@ -53,7 +53,7 @@ if (!(strpos(basename($_SERVER['PHP_SELF']), "index.php"))) {
 			<li><a href="<?php echo $indexLink . $gamesLink; ?>">GAMES</a></li>
 			<li><a href="<?php echo $indexLink . $aboutUsLink; ?>">ABOUT US</a></li>
 			<li><a href="<?php echo $indexLink . $feedbackLink; ?>">FEEDBACK</a></li>
-			<li><a href="<?php echo $indexLink . $joinNowLink; ?>">JOIN NOW</a></li>
+			<li><a href="<?php echo $indexLink . $joinNowLink; ?>">COMMENTS</a></li>
 			<li><a href="<?php echo $indexLink . $contactLink; ?>">CONTACT</a></li>
 		</ul>
 		<ul class="sub-links">

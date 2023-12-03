@@ -21,7 +21,7 @@
   <header>
     <?php include('php/structure/top_navigation_bar.php');?>
     <section class="logo">
-      <img src="img/logo_square_1485x1485_tight_transparent.png" alt="logo" id="logo" />
+      <img src="img/logo_square_1485x1485_tight_transparent1.png" alt="logo" id="logo" />
     </section>
   </header>
   <main>

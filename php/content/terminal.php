@@ -1,6 +1,5 @@
 <?php
-$conn = mysqli_connect("sql3.freesqldatabase.com", "sql3665664", "CgfGZSk8Ij", "sql3665664");
-
+$conn = mysqli_connect("sql201.infinityfree.com", "if0_35513046", "EjF9MFxXjeeh", "if0_35513046_arcadegems");
 if (mysqli_connect_errno()) {
     die("Connection failed: ".mysqli_connect_error());
 }
