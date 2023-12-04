@@ -189,7 +189,7 @@
 
                     <label class="form-check-label" for="termsAndConditions" style="color: white; display: flex; align-items: center; justify-content: center; margin-top: 10px; cursor: help;" title="There are no terms and conditions">
                       <input class="form-check-input" type="checkbox" value="" id="termsAndConditions" name="termsAndConditions" required onclick="this.style.backgroundColor = this.checked ? 'rgb(54, 39, 106)' : 'white';">
-                      <span style="text-align: center; padding-left:10px;">I agree to the Terms and Conditions!.</span>
+                      <span style="text-align: center; padding-left:10px;">I agree to the Terms and Conditions</span>
 
                     </label>
                   </div>
