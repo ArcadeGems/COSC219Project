@@ -41,7 +41,6 @@ function checkCookie(name) {
 	return false;
 }
 
-// Usage
 if (checkCookie('username')) {
 	console.log('The username cookie exists');
 } else {

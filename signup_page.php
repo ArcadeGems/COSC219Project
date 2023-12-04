@@ -223,5 +223,4 @@
   <script type="text/javascript" src="JS/formValidation.js"></script>
   <script type="text/javascript" src="JS/signUp.js"></script>
 </body>
-
 </html>
