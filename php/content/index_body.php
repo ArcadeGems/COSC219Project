@@ -19,7 +19,6 @@ session_start();
     42% {
       color: lime;
     }
-
     57% {
       color: blue;
     }
@@ -41,7 +40,7 @@ session_start();
   <br>
   <h2>Our Games</h2>
   <img src="img/workingonitclear1.png" class="clipart" alt="Working on it" id="workingonit" style="max-height: 400px; width: auto;">
-  <p class="centered">
+  <p class="centered" style="text-align: center;">
     Sign up today to receive e-mail updates on our games!
   </p>
   <br><br><br><br><br>
@@ -51,8 +50,8 @@ session_start();
 <h1 id="aboutus">
   <br>
   <h2>About us</h2>
-    <img src="img/studyowlclear1.png" class="clipart" alt="Study Owl" id="studyowl" style="max-height: 400px; width: auto;">
-    <p class="centered">
+  <img src="img/studyowlclear1.png" class="clipart" alt="Study Owl" id="studyowl" style="max-height: 400px; width: auto;">
+  <p class="centered" style="text-align: center;">
     Reilly and Cade are game developers currently enrolled at Okanagan College.
   </p>
   <br><br><br><br><br>

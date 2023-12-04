@@ -1,8 +1,8 @@
 window.onload = function() {
 	var username = getCookie('username');
 	if (username) {
-		document.querySelector('#signUpBtn').textContent = "hello, " + username;
-		document.querySelector('#loginBtn').textContent = "logout";
+		document.querySelector('#signUpBtn').textContent = "Hello, " + username;
+		document.querySelector('#loginBtn').textContent = "Logout";
 		document.querySelector('#loginBtn').href = "";
 		document.querySelector('#loginBtn').removeAttribute("data-toggle");
 		document.querySelector('#loginBtn').removeAttribute("data-target");

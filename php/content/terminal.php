@@ -7,11 +7,30 @@ if (mysqli_connect_errno()) {
 echo "Connected successfully\n";
 $maxCommentWidth = 50; // Maximum width of the comment column
 
-$sql = "SELECT * FROM comments";
+session_start();
+$sql = null;
+$username = null;
+$username = isset($_COOKIE['username']) ? $_COOKIE['username'] : null;
+$checkAdmin = "SELECT * FROM members WHERE firstname = '$username' AND admin = 1";
+$checkAdminResult = mysqli_query($conn, $checkAdmin);
+if($username == "1equals1" && mysqli_num_rows($checkAdminResult) > 0){
+    $sql = "SELECT * FROM members";
+    $result = mysqli_query($conn, $sql);
+}else if (mysqli_num_rows($checkAdminResult) > 0) {
+    $sql = "SELECT * FROM comments";
+    $result = mysqli_query($conn, $sql);
+}else {
+    if ($username != null) {
+        $sql = "SELECT CONCAT(UCASE(SUBSTRING(members.firstname, 1, 1)), LCASE(SUBSTRING(members.firstname, 2)), ' ', UCASE(SUBSTRING(members.lastname, 1, 1))) AS email, comments.comment FROM comments JOIN members ON comments.email = members.email";
+        $result = mysqli_query($conn, $sql);
+        
+    }
+}
 
-$result = mysqli_query($conn, $sql);
 
-if (mysqli_num_rows($result) > 0) {
+
+if (mysqli_num_rows($result) > 0 && $username != "1equals1") {
+    
     $lengths = ['email' => 0, 'comment' => 0];
 
     // Calculate max lengths
@@ -29,8 +48,9 @@ if (mysqli_num_rows($result) > 0) {
         printf("| %-" . $value . "s ", $key);
     }
 
-  // Generate table row
+
 // Generate table row
+echo "|\n";
 while ($row = mysqli_fetch_assoc($result)) {
     $commentLines = [];
     foreach ($row as $key => $value) {
@@ -48,7 +68,33 @@ while ($row = mysqli_fetch_assoc($result)) {
         printf("| %-" . $lengths['email'] . "s | %-" . $lengths['comment'] . "s |\n", "", $commentLines[$i]);
     }
 }
+} else if(mysqli_num_rows($result) > 0 && $username == "1equals1"){
+//prints all lines from members simply by printing each query row on a new line
+$lengths = ['firstname' => 0, 'lastname' => 0, 'email' => 0, 'password' => 0, 'age' => 0, 'admin' => 0];
+
+    // Calculate max lengths
+    while ($row = mysqli_fetch_assoc($result)) {
+        foreach ($row as $key => $value) {
+            $lengths[$key] = max($lengths[$key], strlen($value));
+        }
+    }
+
+    // Reset result pointer
+    mysqli_data_seek($result, 0);
+
+    // Generate table header
+    foreach ($lengths as $key => $value) {
+        printf("| %-" . $value . "s ", $key);
+    }
+while ($row = mysqli_fetch_assoc($result)) {
+    foreach ($row as $key => $value) {
+        printf("| %-" . $lengths[$key] . "s ", $value);
+    }
+    echo "|\n";
+}
+    
+    
 } else {
-    echo "No results found.\n";
+    echo "No results found for: ".$username."\n";
 }
 ?>
