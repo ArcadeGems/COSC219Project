@@ -41,7 +41,7 @@ session_start();
   <h2>Our Games</h2>
   <img src="img/workingonitclear1.png" class="clipart" alt="Working on it" id="workingonit" style="max-height: 400px; width: auto;">
   <p class="centered" style="text-align: center;">
-    Sign up today to receive e-mail updates on our games!
+    <a href='' style="color:blue;"><u>Sign up</u></a> today to receive e-mail updates on our games!
   </p>
   <br><br><br><br><br>
 </h1>
@@ -52,7 +52,7 @@ session_start();
   <h2>About us</h2>
   <img src="img/studyowlclear1.png" class="clipart" alt="Study Owl" id="studyowl" style="max-height: 400px; width: auto;">
   <p class="centered" style="text-align: center;">
-    Reilly and Cade are game developers currently enrolled at Okanagan College.
+    Reilly and Cade are game developers,<br> currently enrolled at Okanagan College.
   </p>
   <br><br><br><br><br>
 </h1>
@@ -69,7 +69,6 @@ session_start();
   <br><br><br><br>
 </h1>
 
-
 <h1 id="database">
   <br>
   <h2>See what people are saying!</h2>
@@ -79,9 +78,8 @@ session_start();
     <script src="JS/terminalFunction.js"></script>
   </div>
   <div class="scroll" style="width: 100%; overflow: hidden;">
-    <p id="scrolltext" style="font-size: 50px; position: relative; left: 100%; white-space: nowrap; animation: rainbow 5s linear infinite;">I hope you enjoyed!</p>
-    <p id="scrolltext2" style="font-size: 50px; position: relative; left: 100%; white-space: nowrap; animation: rainbow 5s linear infinite;">our Website!</p>
-
+    <p id="scrolltext" style="font-size: 50px; position: relative; right: 100%; white-space: nowrap; animation: rainbow 5s linear infinite;">Contact Us</p>
+    <p id="scrolltext2" style="font-size: 50px; position: relative; right: 100%; white-space: nowrap; animation: rainbow 5s linear infinite;">our social links down below!</p>
     <script src="JS/jQueryDemo.js"></script>
   </div>
   <br><br>
