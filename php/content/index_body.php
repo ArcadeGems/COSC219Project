@@ -41,7 +41,7 @@ session_start();
   <h2>Our Games</h2>
   <img src="img/workingonitclear1.png" class="clipart" alt="Working on it" id="workingonit" style="max-height: 400px; width: auto;">
   <p class="centered" style="text-align: center;">
-    <a href='' style="color:blue;"><u>Sign up</u></a> today to receive e-mail updates on our games!
+    <a href='/signup_page.php' style="color:blue;"><u>Sign up</u></a> today to receive e-mail updates on our games!
   </p>
   <br><br><br><br><br>
 </h1>
