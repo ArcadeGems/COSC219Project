@@ -8,7 +8,7 @@ $(document).ready(function() {
       } else {
         pos--;
         $("#scrolltext").css("left", pos + '%');
-        $("#scrolltext2").css("left", (pos + 25) + '%'); // start this sentence 50% ahead of the first one
+        $("#scrolltext2").css("left", (pos + 25) + '%'); // start this sentence 25% ahead of the first one
       }
     }
 });
