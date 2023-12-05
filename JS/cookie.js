@@ -2,7 +2,6 @@ window.onload = function() {
 	var username = getCookie('username');
 	if (username) {
 		document.querySelector('#signUpBtn').textContent = "HELLO, " + username.toUpperCase();
-		document.querySelector('signUpBtn').disabled = true;
 		document.querySelector('#loginBtn').textContent = "LOGOUT";
 		document.querySelector('#loginBtn').href = "";
 		document.querySelector('#loginBtn').removeAttribute("data-toggle");
@@ -10,7 +9,6 @@ window.onload = function() {
 		document.querySelector('#loginBtn').addEventListener('click', function(e) {
 			document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 			document.querySelector('#signUpBtn').textContent = "SIGN UP";
-			document.querySelector('signUpBtn').disabled = false;
 			document.querySelector('#loginBtn').textContent = "LOGIN";
 			document.querySelector('#loginBtn').href = "";
 			document.querySelector('#loginBtn').setAttribute("data-toggle", "modal");
