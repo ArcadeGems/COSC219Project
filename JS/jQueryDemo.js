@@ -3,12 +3,12 @@ $(document).ready(function() {
     var id = setInterval(frame, 25);
 
     function frame() {
-      if (pos == -50) {
+      if (pos == -100) {
         pos = 200;
       } else {
         pos--;
         $("#scrolltext").css("left", pos + '%');
-        $("#scrolltext2").css("left", (pos + 50) + '%'); // start this sentence 50% ahead of the first one
+        $("#scrolltext2").css("left", (pos + 25) + '%'); // start this sentence 50% ahead of the first one
       }
     }
 });
