@@ -19,6 +19,7 @@ session_start();
     42% {
       color: lime;
     }
+
     57% {
       color: blue;
     }
@@ -41,7 +42,7 @@ session_start();
   <h2>Our Games</h2>
   <img src="img/workingonitclear1.png" class="clipart" alt="Working on it" id="workingonit" style="max-height: 400px; width: auto;">
   <p class="centered" style="text-align: center;">
-    <a href='/signup_page.php' style="color:blue;"><u>Sign up</u></a> today to receive e-mail updates on our games!
+  <a href='/signup_page.php' ><u style="color:blue;">Sign up...</u></a> to receive e-mail updates on our games!
   </p>
   <br><br><br><br><br>
 </h1>
@@ -79,7 +80,7 @@ session_start();
   </div>
   <div class="scroll" style="width: 100%; overflow: hidden;">
     <p id="scrolltext" style="font-size: 50px; position: relative; right: 100%; white-space: nowrap; animation: rainbow 5s linear infinite;">Contact Us</p>
-    <p id="scrolltext2" style="font-size: 50px; position: relative; right: 100%; white-space: nowrap; animation: rainbow 5s linear infinite;">our social links down below!</p>
+    <p id="scrolltext2" style="font-size: 50px; position: relative; right: 100%; white-space: nowrap; animation: rainbow 5s linear infinite;">with our social links down below!</p>
     <script src="JS/jQueryDemo.js"></script>
   </div>
   <br><br>
