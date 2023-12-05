@@ -176,8 +176,6 @@ footer {
 }
 
 .footer-social li:hover {
-	border-color: rgb(60, 25, 65);
-	background-color: rgb(60, 25, 65);
 	color: white;
 	
 
@@ -214,3 +212,8 @@ position: relative;
 	resize: none;
 }
 
+.centered{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

@@ -71,6 +71,40 @@
     .btn:hover {
       background-color: rgba(54, 39, 106, .75) !important;
     }
+
+    @keyframes rainbow {
+      0% {
+        color: red;
+      }
+
+      14% {
+        color: orange;
+      }
+
+      28% {
+        color: yellow;
+      }
+
+      42% {
+        color: lime;
+      }
+
+      57% {
+        color: blue;
+      }
+
+      71% {
+        color: indigo;
+      }
+
+      85% {
+        color: violet;
+      }
+
+      100% {
+        color: red;
+      }
+    }
   </style>
 </head>
 
@@ -83,11 +117,11 @@
         <div class="row gx-lg-5 align-items-center">
           <div class="col-lg-6 mb-5 mb-lg-0">
             <section class="logo">
-              <img src="img/logo_square_1485x1485_tight_transparent.png" alt="logo" id="logo" />
+              <img src="img/logo_square_1485x1485_tight_transparent1.png" alt="logo" id="logo" />
 
               <h1 class="my-5 display-3 fw-bold ls-tight">
                 Join Now...<br />
-                <span class="text-primary">Unlock <i><u>FREE</u></i> Membership Privileges!</span>
+                <span class="text-primary">Unlock <i style="animation: rainbow 20s linear infinite ;"><u>FREE</u></i> Membership Privileges!</span>
               </h1>
               <p style="color: black">
                 You know you want to read those comments
@@ -155,7 +189,7 @@
 
                     <label class="form-check-label" for="termsAndConditions" style="color: white; display: flex; align-items: center; justify-content: center; margin-top: 10px; cursor: help;" title="There are no terms and conditions">
                       <input class="form-check-input" type="checkbox" value="" id="termsAndConditions" name="termsAndConditions" required onclick="this.style.backgroundColor = this.checked ? 'rgb(54, 39, 106)' : 'white';">
-                      <span style="text-align: center; padding-left:10px;">I agree to the Terms and Conditions!.</span>
+                      <span style="text-align: center; padding-left:10px;">I agree to the Terms and Conditions</span>
 
                     </label>
                   </div>
