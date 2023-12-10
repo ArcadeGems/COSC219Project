@@ -1,6 +1,4 @@
 <body>
-	<!--TODO: - Center elements in this form
-			  - Remove gap from h1 & h6-->
 	<h1 class="text-center">Create Account</h1>
 	<h6 class="text-center">Already have an account? <a href="login.php">Log in</a></h6>
 

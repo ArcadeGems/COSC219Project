@@ -3,7 +3,7 @@ if (username) {
   refreshData();
   setInterval(refreshData, 15000);
 } else {
-  document.getElementById("terminal").innerHTML = "Welcome to our database! Please sign up to join.";
+  document.getElementById("terminal").innerHTML = " Welcome to our database! Please sign up to view user comments!";
 }
 
 function refreshData() {
