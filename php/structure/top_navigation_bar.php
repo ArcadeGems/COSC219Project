@@ -1,5 +1,9 @@
 <?php
-session_start();
+
+if (session_status() == PHP_SESSION_NONE) {
+	ob_start(); 
+	session_start();
+}
 $gamesLink = "#games";
 $aboutUsLink = "#aboutus";
 $joinNowLink = "#database";
@@ -48,8 +52,11 @@ if (!(strpos(basename($_SERVER['PHP_SELF']), "index.php"))) {
 	</div>
 
 
-	<nav class="navbar">
+	<nav class="navbar" >
+	<div class="navbar-container">
+		<div><ul><li style="visibility: hidden;">LOGIN</li></ul></div>
 		<ul class="main-links">
+		
 			<li><a href="<?php echo $indexLink . $gamesLink; ?>">GAMES</a></li>
 			<li><a href="<?php echo $indexLink . $aboutUsLink; ?>">ABOUT US</a></li>
 			<li><a href="<?php echo $indexLink . $feedbackLink; ?>">FEEDBACK</a></li>
@@ -60,8 +67,9 @@ if (!(strpos(basename($_SERVER['PHP_SELF']), "index.php"))) {
 			<li><a id="signUpBtn" href="./signup_page.php">SIGN UP</a></li>
 			<li><a> <a id="loginBtn" href="" data-toggle="modal" data-target="#modalLoginForm">LOGIN</a></li>
 		</ul>
-
+	</div>
 	</nav>
 	<script src="JS/loginFunction.js"></script>
+	
 	<script src="JS/cookie.js"></script>
 </body>

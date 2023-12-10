@@ -5,12 +5,13 @@
   <title>Home</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+  <!-- <meta name="viewport" content="width=1024"> -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css" />
   <!--
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css">
    additional fonts for social media icons text if desired later: 
-  
   -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <style>
@@ -38,6 +39,7 @@
     input[type="password"]:hover,
     input[type="number"]:hover {
       background-color: rgba(220, 154, 254, 0.1);
+      color: white;
     }
 
     body {
@@ -66,51 +68,27 @@
       background-color: rgb(54, 39, 106);
       color: rgb(255, 106, 164);
       transition: background-color 0.3s;
+      color: white;
     }
 
     .btn:hover {
       background-color: rgba(54, 39, 106, .75) !important;
+      color: white;
     }
 
-    @keyframes rainbow {
-      0% {
-        color: red;
-      }
 
-      14% {
-        color: orange;
-      }
+input:invalid,input:valid {
+    background-color: rgba(255, 106, 164, 90%);
+    color:white;
 
-      28% {
-        color: yellow;
-      }
+}
 
-      42% {
-        color: lime;
-      }
-
-      57% {
-        color: blue;
-      }
-
-      71% {
-        color: indigo;
-      }
-
-      85% {
-        color: violet;
-      }
-
-      100% {
-        color: red;
-      }
-    }
   </style>
 </head>
 
 <body>
   <header>
-    <?php include('php/structure/top_navigation_bar.php'); ?>
+    <!-- <?php include('php/structure/top_navigation_bar.php'); ?> -->
 
     <section class="px-4 py-5 px-md-5 text-center text-lg-start">
       <div class="container">
@@ -137,7 +115,6 @@
               </div>
               <div class="card-body py-5 px-md-5">
                 <form id="signUpForm" method="POST" action="php/content/processForm.php">
-                  <!-- 2 column grid layout with text inputs for the first and last names -->
                   <div class="row">
                     <div class="col-md-6 mb-4">
                       <div class="form-outline">

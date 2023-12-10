@@ -33,34 +33,53 @@ a:link {
 .navbar{
 	position: fixed;
 	justify-content: center;
-	align-items: center;
+	align-items: center; 
 	top: 0;
 	width: 100%;
-	display: flex;
+	display: flex; 
 	background-color: rgb(57, 162, 254);
 	z-index: 1;
 	font-weight: bold;
+	white-space: nowrap;
+	.clearfix::after {
+		content: "";
+		clear: both;
+		display: table;
+	  }
 	:hover {
 		color:white;
 	}
+}
+.navbar-container {
+	display: flex;
+	justify-content:space-around;
+
+	padding: 0 10%;
+	width: 80%;
 }
 #footer-social	:hover {
 	color:white;
 }
 .navbar ul.main-links {
 	display: flex;
+
+
 	list-style: none;
 	margin: 0;
 	padding: 5px;
 	background-color: rgb(57, 162, 254);
+	
 }
 
 .navbar ul.main-links li {
+	position:relative;
 	margin: 0 5px;
 	background-color: rgb(54, 39, 106);
 	border-radius: 5px;
 	border: 3px solid transparent;
 	color: rgb(255, 106, 164);
+
+
 }
 
 .navbar ul.main-links li:hover {
@@ -75,9 +94,10 @@ a:link {
 }
 
 .navbar ul.sub-links {
+	float: right;
 	display: flex;
-	position: absolute;
-	right: 10px;
+	justify-content: space-evenly;
+
 	list-style: none;
 	margin: 0;
 	padding: 5px;
@@ -90,6 +110,7 @@ a:link {
 	border-radius: 5px;
 	border: 3px solid transparent;
 	color: rgb(255, 106, 164);
+
 }
 
 .logo img,
@@ -217,3 +238,38 @@ position: relative;
 	justify-content: center;
 	align-items: center;
 }
+@keyframes rainbow {
+    0% {
+      color: red;
+    }
+
+    14% {
+      color: orange;
+    }
+
+    28% {
+      color: yellow;
+    }
+
+    42% {
+      color: lime;
+    }
+
+    57% {
+      color: blue;
+    }
+
+    71% {
+      color: indigo;
+    }
+
+    85% {
+      color: violet;
+    }
+
+    100% {
+      color: red;
+    }
+  }
+
+  
