@@ -13,11 +13,11 @@ body {
 	margin: 0;
 }
 
-textarea{
-	margin:0;
+textarea {
+	margin: 0;
 	font-family: monospace !important;
 	font-size: 16px !important;
-	line-height:inherit;
+	line-height: inherit;
 }
 
 *:visited {
@@ -30,7 +30,7 @@ a:link {
 	color: rgb(255, 106, 164);
 }
 
-.navbar{
+.navbar {
 	position: fixed;
 	justify-content: center;
 	align-items: center;
@@ -40,34 +40,58 @@ a:link {
 	background-color: rgb(57, 162, 254);
 	z-index: 1;
 	font-weight: bold;
+	white-space: nowrap;
+
+	.clearfix::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+
 	:hover {
-		color:white;
+		color: white;
 	}
 }
-#footer-social	:hover {
-	color:white;
+
+.navbar-container {
+	display: flex;
+	justify-content: space-around;
+
+	padding: 0 10%;
+	width: 80%;
 }
+
+#footer-social:hover {
+	color: white;
+}
+
 .navbar ul.main-links {
 	display: flex;
+
+
 	list-style: none;
 	margin: 0;
 	padding: 5px;
 	background-color: rgb(57, 162, 254);
+
 }
 
 .navbar ul.main-links li {
+	position: relative;
 	margin: 0 5px;
 	background-color: rgb(54, 39, 106);
 	border-radius: 5px;
 	border: 3px solid transparent;
 	color: rgb(255, 106, 164);
+
+
 }
 
 .navbar ul.main-links li:hover {
 	border-color: rgb(54, 39, 106);
-	color:white;
+	color: white;
 	/* background-color: rgb(254, 33, 15); */
-	
+
 }
 
 .navbar li a {
@@ -75,9 +99,10 @@ a:link {
 }
 
 .navbar ul.sub-links {
+	float: right;
 	display: flex;
-	position: absolute;
-	right: 10px;
+	justify-content: space-evenly;
+
 	list-style: none;
 	margin: 0;
 	padding: 5px;
@@ -90,6 +115,7 @@ a:link {
 	border-radius: 5px;
 	border: 3px solid transparent;
 	color: rgb(255, 106, 164);
+
 }
 
 .logo img,
@@ -100,12 +126,14 @@ a:link {
 	width: auto;
 	padding-top: 100px;
 }
-#logo{
+
+#logo {
 	max-height: 500px;
 	max-width: auto;
 	padding-bottom: 100px;
 	overflow: hidden;
 }
+
 .clipart {
 	overflow: visible;
 	max-height: 250px;
@@ -177,7 +205,7 @@ footer {
 
 .footer-social li:hover {
 	color: white;
-	
+
 
 }
 
@@ -186,10 +214,10 @@ footer {
 }
 
 .laptopterminal {
-display: flex;
-justify-content: center;
-align-items: center;
-position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
 }
 
 .laptopterminal img {
@@ -205,15 +233,49 @@ position: relative;
 	height: 27%;
 	top: 41.2%;
 	left: 24.3%;
-	background-color: rgb(0, 0, 0); 
+	background-color: rgb(0, 0, 0);
 	color: green;
 	border-radius: 3%;
 	border: 2px solid black;
 	resize: none;
 }
 
-.centered{
+.centered {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+@keyframes rainbow {
+	0% {
+		color: red;
+	}
+
+	14% {
+		color: orange;
+	}
+
+	28% {
+		color: yellow;
+	}
+
+	42% {
+		color: lime;
+	}
+
+	57% {
+		color: blue;
+	}
+
+	71% {
+		color: indigo;
+	}
+
+	85% {
+		color: violet;
+	}
+
+	100% {
+		color: red;
+	}
 }

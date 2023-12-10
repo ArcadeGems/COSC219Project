@@ -2,41 +2,7 @@
 session_start();
 ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<style>
-  @keyframes rainbow {
-    0% {
-      color: red;
-    }
 
-    14% {
-      color: orange;
-    }
-
-    28% {
-      color: yellow;
-    }
-
-    42% {
-      color: lime;
-    }
-
-    57% {
-      color: blue;
-    }
-
-    71% {
-      color: indigo;
-    }
-
-    85% {
-      color: violet;
-    }
-
-    100% {
-      color: red;
-    }
-  }
-</style>
 <h1 id="games">
   <br>
   <h2>Our Games</h2>

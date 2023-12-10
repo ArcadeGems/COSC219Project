@@ -41,9 +41,8 @@ if (mysqli_num_rows($result) > 0 && $username != "1equals1") {
     mysqli_data_seek($result, 0);
 
     // Generate table header
-    foreach ($lengths as $key => $value) {
-        printf("| %-" . $value . "s ", "Name");
-    }
+    printf("| %-" . $lengths['email'] . "s ", "Member");
+    printf("| %-" . $lengths['comment'] . "s ", "Comment");
 
 
     // Generate table row
@@ -78,11 +77,9 @@ if (mysqli_num_rows($result) > 0 && $username != "1equals1") {
     mysqli_data_seek($result, 0);
     while ($row = mysqli_fetch_assoc($result)) {
         foreach ($row as $key => $value) {
-            if ($key === 'password') {
-                $value = sha1($value);
-            } else {
+
                 printf("| %-" . $lengths[$key] . "s ", $value);
-            }
+            
         }
         echo "|\n";
     }
