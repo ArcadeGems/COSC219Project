@@ -8,14 +8,14 @@ $gamesLink = "#games";
 $aboutUsLink = "#aboutus";
 $joinNowLink = "#database";
 $feedbackLink = "#feedback";
-$contactLink = "#footer-social";
+$contactLink = "#contact";
 $indexLink = "";
-if (!(strpos(basename($_SERVER['PHP_SELF']), "index.php"))) {
-	$indexLink = "index.php";
-}
+// if (!(strpos(basename($_SERVER['PHP_SELF']), "index.php"))) {
+// 	$indexLink = "index.php";
+// }
 ?>
 
-<body>
+<body style="font-family: Placebo Condensed Sans W00 Bold;">
 	<div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">

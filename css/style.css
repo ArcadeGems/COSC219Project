@@ -83,7 +83,7 @@ a:link {
 	border-radius: 5px;
 	border: 3px solid transparent;
 	color: rgb(255, 106, 164);
-
+	
 
 }
 
@@ -140,8 +140,8 @@ a:link {
 }
 
 main {
-	display: flex;
-	flex-direction: column;
+	display: flexbox;
+	flex-direction: row;
 	align-items: center;
 	background-color: rgba(255, 103, 160, 0.9);
 	padding: 1.5% 0 0 0;
@@ -158,12 +158,26 @@ main section {
 	border-top: 10px;
 	border-top-color: white;
 	font-size: calc(1em + 1vw);
+
 }
 
 main h2 {
 	text-align: center;
 	font-size: 55px;
 	text-transform: uppercase;
+	font-family: Placebo Condensed Sans W00 Bold;
+	color: transparent;
+	-webkit-text-stroke: 1px black;
+	-webkit-text-fill-color: #FEFDFC;
+	background-clip: text;
+
+}
+h1{
+	font-family: Placebo Condensed Sans W00 Bold;
+	color: transparent;
+	-webkit-text-stroke: 1px black;
+	-webkit-text-fill-color: #FEFDFC;
+	background-clip: text;
 }
 
 #join {
@@ -195,12 +209,16 @@ footer {
 
 .footer-social li {
 	margin: 0 10px;
-	color: rgb(54, 39, 106);
-	background-color: rgb(255, 106, 164);
+	/*color: rgb(54, 39, 106);
+	*/background-color: rgb(255, 106, 164);
 	padding: 10px;
 	border-radius: 5px;
 	border: 3px solid transparent;
 	font-weight: bold;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
 }
 
 .footer-social li:hover {
@@ -208,13 +226,16 @@ footer {
 
 
 }
+.social-icons:hover{
+	color:white;
+}
 
 .footer-social li a {
 	text-decoration: none;
 }
 
 .laptopterminal {
-	display: flex;
+	display: flexbox;
 	justify-content: center;
 	align-items: center;
 	position: relative;
@@ -234,7 +255,7 @@ footer {
 	top: 41.2%;
 	left: 24.3%;
 	background-color: rgb(0, 0, 0);
-	color: green;
+	color: green !important;
 	border-radius: 3%;
 	border: 2px solid black;
 	resize: none;
@@ -278,4 +299,22 @@ footer {
 	100% {
 		color: red;
 	}
+}
+@font-face {
+    font-family: "Gumbo DEMO Regular";
+    src: url("https://db.onlinewebfonts.com/t/d93a220d3f8cb4e58a1b8e4892e29947.eot");
+    src: url("https://db.onlinewebfonts.com/t/d93a220d3f8cb4e58a1b8e4892e29947.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/d93a220d3f8cb4e58a1b8e4892e29947.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/d93a220d3f8cb4e58a1b8e4892e29947.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/d93a220d3f8cb4e58a1b8e4892e29947.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/d93a220d3f8cb4e58a1b8e4892e29947.svg#Gumbo DEMO Regular")format("svg");
+}
+@font-face {
+    font-family: "Placebo Condensed Sans W00 Bold";
+    src: url("https://db.onlinewebfonts.com/t/2a89afebffd9f005316da62528331fd9.eot");
+    src: url("https://db.onlinewebfonts.com/t/2a89afebffd9f005316da62528331fd9.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/2a89afebffd9f005316da62528331fd9.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/2a89afebffd9f005316da62528331fd9.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/2a89afebffd9f005316da62528331fd9.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/2a89afebffd9f005316da62528331fd9.svg#Placebo Condensed Sans W00 Bold")format("svg");
 }

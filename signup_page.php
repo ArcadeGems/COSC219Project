@@ -69,7 +69,7 @@
       color: white;
     }
 
-    .btn:hover {
+    button.btn.btn-primary.btn-block.mb-4:hover {
       background-color: rgba(54, 39, 106, .75) !important;
       color: white;
     }
@@ -84,7 +84,7 @@ input:invalid,input:valid {
   </style>
 </head>
 
-<body>
+<body style="font-family: Placebo Condensed Sans W00 Bold;">
   <header>
     <!-- <?php include('php/structure/top_navigation_bar.php'); ?> -->
 
@@ -95,18 +95,18 @@ input:invalid,input:valid {
             <section class="logo">
               <img src="img/logo_square_1485x1485_tight_transparent1.png" alt="logo" id="logo" />
 
-              <h1 class="my-5 display-3 fw-bold ls-tight">
-                Join Now...<br />
-                <span class="text-primary">Unlock <i style="animation: rainbow 20s linear infinite ;"><u>FREE</u></i> Membership Privileges!</span>
-              </h1>
-              <p style="color: black">
+              <h2 class="my-5 display-3 fw-bold ls-tight">
+                <i ><a style="color: transparent; -webkit-text-stroke: 1px black; -webkit-text-fill-color: #FEFDFC; background-clip: text;">Join Now...</i><br />
+                <span class="text-primary" >Unlock</a> <i style="animation: rainbow 20s linear infinite ;"><u>FREE</u></i><a<a style="color: transparent; -webkit-text-stroke: 1px black; -webkit-text-fill-color: rgb(255, 106, 164); background-clip: text;"> Membership Privileges!</a></span>
+              </h2>
+              <i style="color: black">
                 You know you want to read those comments
-              </p>
+              </i>
             </section>
           </div>
 
           <div class="col-lg-6 mb-5 mb-lg-0">
-            <h1 class="display-4 fw-bold text-center mb-4">Sign Up Today!</h1>
+            <h1 class="display-4 fw-bold text-center mb-4" style="font-family: Placebo Condensed Sans W00 Bold; color: transparent; -webkit-text-stroke: 1px black; -webkit-text-fill-color: #FEFDFC; background-clip: text;">Sign Up Today!</h1>
             <div class="card" style="position: relative;">
               <div id="popup" style="display: none; width: 100%; height: 40px; background: rgba(255, 0, 0, 0.5); border: 1px solid black; padding: 10px; z-index: 1000; position: absolute; top: 0;">
                 <p id="popupText" style="color: white;"></p>

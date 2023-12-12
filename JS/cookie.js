@@ -14,6 +14,8 @@ window.onload = function() {
 			document.querySelector('#loginBtn').setAttribute("data-toggle", "modal");
 			document.querySelector('#loginBtn').setAttribute("data-target", "#modalLoginForm");
 		});
+
+		
 	}
 };
 

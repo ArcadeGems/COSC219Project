@@ -5,20 +5,35 @@
   <title>Arcade-Gems</title>
   <meta charset="utf-8" />
   <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+  <meta name="title" content="Arcade-Gems">
+<meta name="description" content="The home of authentic Arcade-Gems!">
+<meta name="keywords" content="arcade-gems, arcade-games, arcade, games">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="English">
+<meta name="revisit-after" content="1 days">
   <meta name="viewport" content="width=device-width, initial-scale=.5">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body>
+<body  >
+
   <header>
-    <?php include('php/structure/top_navigation_bar.php');?>
+    <?php include('php/structure/top_navigation_bar.php'); ?>
     <section class="logo">
-      <img src="img/logo_square_1485x1485_tight_transparent1.png" alt="logo" id="logo" />
+    <div class="scroll" style="width: 60%; overflow: hidden; display: flex; justify-content: center; align-items: center; margin-left: 20%; margin-right: 20%; max-height: 50%;">
+      <img src="img/logo_square_1485x1485_tight_transparent1.png" alt="logo" id="logo" style="position:absolute;" />
+      <p id="scrolltext" style="font-family: Placebo Condensed Sans W00 Bold;font-size: 275px; position: relative; white-space: nowrap; animation: rainbow 5s linear infinite; z-index: -1; opacity: 0.3;">ARCADE-GEMS</p>
+      <script src="JS/jQueryDemo.js"></script>
+    </div>
     </section>
   </header>
+
   <main>
+    
     <section class="main-content">
       <?php include('php/content/index_body.php'); ?>
     </section>
@@ -36,5 +51,7 @@
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
+
 </html>

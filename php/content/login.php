@@ -14,7 +14,7 @@ $sql = "SELECT * FROM members WHERE email = '$email' AND password = SHA1('$passw
 $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
 	$row = mysqli_fetch_assoc($result);
-	setcookie("username", $row['firstname'], time() + (3,600 * 60), "/"); // 86400 = 1 day
+	setcookie("username", $row['firstname'], time() + (3600 * 60), "/");
 	echo "success";
 } else {
 	echo "Error: " . $sql . "<br>" . $conn->error;
