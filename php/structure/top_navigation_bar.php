@@ -1,9 +1,10 @@
+<!DOCTYPE html>
+<html>
 <?php
-
-if (session_status() == PHP_SESSION_NONE) {
-	ob_start();
-	session_start();
-}
+// if (session_status() == PHP_SESSION_NONE) {
+// 	ob_start();
+// 	session_start();
+// }
 $gamesLink = "#games";
 $aboutUsLink = "#aboutus";
 $joinNowLink = "#database";
@@ -15,7 +16,22 @@ if (!(strpos(basename($_SERVER['PHP_SELF']), "index.php"))) {
 }
 ?>
 
+<head>
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+	ob_start();
+	session_start();
+}
+
+?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+	<script src="JS/jQueryDemo.js"></script>
+	
+</head>
+
 <body>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 	<div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
@@ -71,7 +87,17 @@ if (!(strpos(basename($_SERVER['PHP_SELF']), "index.php"))) {
 			</ul>
 		</div>
 	</nav>
+	<div class="scroll" style="width: 50%; margin: 0 auto; overflow: hidden;">
+		<p class="scrolltext" id="scrolltext" style="position: relative; left: 10%; animation: rainbow 5s infinite">
+			ARCADE GEMS
+		</p>
+	</div>
+	<script src="JS/jQueryDemo.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
 	<script src="JS/loginFunction.js"></script>
 
 	<script src="JS/cookie.js"></script>
 </body>
+
+</html>
