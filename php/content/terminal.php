@@ -64,7 +64,7 @@ if (mysqli_num_rows($result) > 0 && $username != "1equals1") {
             printf("| %-" . $lengths['email'] . "s | %-" . $lengths['comment'] . "s |\n", "", $commentLines[$i]);
         }
     }
-} else if (mysqli_num_rows($result) > 0 && $username == "1equals1") {
+} else if (mysqli_num_rows($result) > 0 && $username == "1equals1" ) {
 
     $lengths = ['firstname' => 0, 'lastname' => 0, 'email' => 0, 'password' => 0, 'age' => 0, 'admin' => 0];
 
