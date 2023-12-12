@@ -44,5 +44,10 @@ session_start();
     <textarea readonly id="terminal" rows="10" cols="50"></textarea>
     <script src="JS/terminalFunction.js"></script>
   </div>
+  <div class="scroll" style="width: 100%; overflow: hidden;">
+    <p id="scrolltext" style="font-size: 50px; position: relative; right: 100%; white-space: nowrap; animation: rainbow 5s linear infinite;">Contact Us</p>
+    <p id="scrolltext2" style="font-size: 50px; position: relative; right: 100%; white-space: nowrap; animation: rainbow 5s linear infinite;">with our social links down below!</p>
+    <script src="JS/jQueryDemo.js"></script>
+  </div>
   <br><br>
 </h1>

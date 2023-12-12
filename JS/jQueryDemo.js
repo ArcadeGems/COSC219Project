@@ -1,13 +1,14 @@
 $(document).ready(function() {
-  var pos = 130;
-  var id = setInterval(frame, 20);
+    var pos = 200;
+    var id = setInterval(frame, 25);
 
-  function frame() {
-    if (pos == -65) {
-      pos = 130;
-    } else {
-      pos--;
-      $(".scrolltext").css("left", pos + '%'); // use the class selector instead of the id selector
+    function frame() {
+      if (pos == -100) {
+        pos = 200;
+      } else {
+        pos--;
+        $("#scrolltext").css("left", pos + '%');
+        $("#scrolltext2").css("left", (pos + 25) + '%'); // start this sentence 25% ahead of the first one
+      }
     }
-  }
 });
